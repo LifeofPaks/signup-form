@@ -39,7 +39,7 @@ function validateInput(){
         if(lastNameInput.value === ""){
             lastNameBox.classList.add('error')
             lastNameInput.classList.add('text-error')
-            lastNameErrorMessage.innerHTML = `First Name cannot be empty`
+            lastNameErrorMessage.innerHTML = `Last Name cannot be empty`
             lastNameErrorIcon.classList.add('active')
         } else{
             lastNameBox.classList.remove('error')
@@ -53,16 +53,13 @@ function validateInput(){
         if(emailInput.value === ""){
             emailBox.classList.add('error')
             emailInput.classList.add('text-error')
-            emailErrorMessage.innerHTML = `First Name cannot be empty`
+            emailErrorMessage.innerHTML = `Looks like this is not an email`
             emailErrorIcon.classList.add('active')
         } 
         else if (emailInput.value != "" &&
         emailInput.value.match(
           /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
         )){
-    
-        }
-        else{
             emailBox.classList.remove('error')
             emailInput.classList.remove('text-error')
             emailErrorMessage.innerHTML = ``
@@ -74,7 +71,7 @@ function validateInput(){
         if(passwordInput.value === ""){
             passwordBox.classList.add('error')
             passwordInput.classList.add('text-error')
-            passwordErrorMessage.innerHTML = `First Name cannot be empty`
+            passwordErrorMessage.innerHTML = `Password cannot be empty`
             passwordErrorIcon.classList.add('active')
         } else{
             passwordBox.classList.remove('error')
