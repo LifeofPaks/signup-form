@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--Red: hsl(0, 100%, 74%) ;
+--Green: hsl(154, 59%, 51%);
+--Blue: hsl(248, 32%, 49%);
+--Dark-Blue: hsl(249, 10%, 26%) ;
+--Grayish-Blue: hsl(246, 25%, 77%);
+--White: #fff;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Red);
+    background-image: url(images/bg-intro-desktop.png);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+button,
+input{
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+button{
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 10%;
+}
+
+.col-1,
+.col-2{
+    width: 100%;
+}
+
+.col-1 h1{
+    font-size: 3rem;
+    color: var(--White);
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.col-1 p{
+    color: var(--White);
+}
+
+.col-1{
+    width: 500px;
+}
+
+.col-2{
+    width: 450px;
+}
+
+header{
+    text-align: center;
+    background: var(--Blue);
+    border-radius: 10px;
+    padding: .8rem 0;
+    box-shadow: 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+header p{
+    font-size: .9rem;
+    color: var(--White);
+    font-weight: 600;
+}
+
+header p span{
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+}
+
+.form-container{
+    background: var(--White);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.box{
+    width: 100%;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 1.3rem;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    transition: 0.3s;
+}
+
+.box:hover{
+    border: 1px solid var(--Blue);
+}
+
+.input{
+    width: 100%;
+    padding: 1rem;
+    font-family: 1.3rem;
+}
+
+.input::placeholder{
+    font-weight: 600;
+}
+
+.input:focus::placeholder{
+    color: transparent;
+}
+
+.FN-error-message,
+.LN-error-message,
+.EM-error-message,
+.PW-error-message{
+    position: absolute;
+    bottom: -18px;
+    right: 0;
+    font-size: 9px;
+    color: var(--Red);
+    font-style: italic;;
+}
+
+.FN-error-icon,
+.LN-error-icon,
+.EM-error-icon,
+.PW-error-icon{
+    width: 18px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.FN-error-icon.active,
+.LN-error-icon.active,
+.EM-error-icon.active,
+.PW-error-icon.active{
+    opacity: 1;
+}
+
+.first-name-box.error,
+.last-name-box.error,
+.email-box.error,
+.password-box.error{
+    border: 1.7px solid var(--Red);
+}
+
+.first-name-input.text-error,
+.last-name-input.text-error,
+.email-input.text-error,
+.password-input.text-error{
+    color: var(--Red);
+}
+
+.submit-btn{
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--White);
+    letter-spacing: 1.4px;
+    background: var(--Green);
+    border-radius: 5px;
+    font-size: .8rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 0 0 rgb(49, 172, 64);
+    transition: 0.3s;
+}
+
+.submit-btn:hover{
+    opacity: .7;
+}
+
+.terms{
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: var(--Grayish-Blue);
+}
+
+.terms span{
+    font-weight: bold;
+    color: var(--Red);
+    cursor: pointer;
+}
+
+/* RESPONSIVE FOR SMALLER SCREEN */
+@media (max-width: 600px){
+    body{
+        overflow: unset;
+    }
+    .container{
+        margin: 3rem 2rem;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .col-1{
+        text-align: center;
+    }
+
+    .col-1 h1{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        line-height: 45px;
+    }
+    
+    .col-1 p{
+        font-size: 1.1rem;
+        line-height: 32px;
+    }
+    
+    .col-1,
+    .col-2{
+        width: 350px;
+    }
+
+    .form-container{
+        padding: 1.5rem;
+    }
+    
+    header p{
+        font-size: 1.1rem;
+        width: 350px;
+        padding: 0 4rem;
+    }
+
+    .terms {
+        font-size: .8rem;
+    }
+
+    .input{
+        padding: 1.5rem;
+    }
+
+    .input::placeholder{
+        font-size: 1rem;
+    }
+    
+}
+
+
